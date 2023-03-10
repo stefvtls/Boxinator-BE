@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Entity
 @Getter
 @Setter
@@ -28,4 +30,6 @@ public class Country {
     @Column
     private int distance;
 
+    @OneToMany(mappedBy = "country")
+    private Set<Shipment> shipments;
 }
