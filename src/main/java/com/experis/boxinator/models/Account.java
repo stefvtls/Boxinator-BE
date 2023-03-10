@@ -40,6 +40,9 @@ public class Account {
 
     @Column
     private Date createdAt = new Date();
+
+    @OneToOne(mappedBy = "account")
+    private Sender sender;
     }
 
 
