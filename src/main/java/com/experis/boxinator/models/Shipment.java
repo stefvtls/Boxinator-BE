@@ -4,7 +4,6 @@ import com.experis.boxinator.models.enums.ShipmentStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.mapping.Set;
 
 @Entity
 @Getter

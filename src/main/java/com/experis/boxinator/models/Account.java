@@ -41,7 +41,7 @@ public class Account {
     @Column
     private Date createdAt = new Date();
 
-    @OneToOne(mappedBy = "account")
+    @OneToOne(mappedBy = "subId")
     private Sender sender;
     }
 
