@@ -1,7 +1,6 @@
 package com.experis.boxinator.models;
 
 import com.experis.boxinator.models.enums.Role;
-import com.experis.boxinator.models.enums.ShipmentStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,7 +24,7 @@ public class Sender {
     private Role role;
 
     @OneToOne
-    private Account account;
+    private Account subId;
 
     @OneToMany(mappedBy = "sender")
     private Set<Shipment> shipments;

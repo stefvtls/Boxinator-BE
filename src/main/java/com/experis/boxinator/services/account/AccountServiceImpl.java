@@ -15,33 +15,34 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account findById(Long id)
-    {
+
+    public Account findById(Long id) {
         return accountRepository.getReferenceById(id);
     }
 
     @Override
     public Collection<Account> findAll() {
-        return null;
+        return accountRepository.findAll();
     }
 
     @Override
     public Account add(Account entity) {
-        return null;
+        return accountRepository.save(entity);
     }
 
     @Override
     public Account update(Account entity) {
-        return null;
+        return accountRepository.saveAndFlush(entity);
     }
 
     @Override
-    public void deleteById(Long aLong) {
-
-    }
+    public void deleteById(Long id) {accountRepository.deleteById(id);}
 
     @Override
-    public boolean exists(Long aLong) {
-        return false;
+    public boolean exists(Long id) {
+        return accountRepository.existsById(id);
     }
+
+    public Account findBySubId(Long subId){ return accountRepository.getReferenceById(subId);}
+
 }
